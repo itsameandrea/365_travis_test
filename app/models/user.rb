@@ -6,4 +6,8 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_many :comments
+
+  def full_name
+    "#{first_name.capitalize} #{last_name.capitalize}"
+  end
 end
